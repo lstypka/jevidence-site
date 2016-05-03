@@ -1723,6 +1723,13 @@ color: white;
 }
 
 .author_contact a:hover {
-    color: #888888;
-    text-decoration: underline;
+    color:#49b5e7;
+}
+
+.docs a {
+    color: black;
+}
+
+.docs a:hover {
+   color:#49b5e7;
 }
