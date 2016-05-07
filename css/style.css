@@ -1717,12 +1717,16 @@ color: white;
     font-weight : bold;
 }
 
-.author_contact a {
+.author_contact a,
+.author_contact span
+ {
     color: #333333;
     margin-left: 10px;
 }
 
-.author_contact a:hover {
+.author_contact a:hover,
+.author_contact span:hover
+{
     color:#49b5e7;
 }
 

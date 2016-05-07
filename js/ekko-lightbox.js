@@ -24,7 +24,7 @@ License: https://github.com/ashleydw/lightbox/blob/master/LICENSE
     this.modal_id = this.options.modal_id ? this.options.modal_id : 'ekkoLightbox-' + Math.floor((Math.random() * 1000) + 1);
     header = '<div class="modal-header"' + (this.options.title || this.options.always_show_close ? '' : ' style="display:none"') + '><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button><h4 class="modal-title">' + (this.options.title || "&nbsp;") + '</h4></div>';
     footer = '<div class="modal-footer"' + (this.options.footer ? '' : ' style="display:none"') + '>' + this.options.footer + '</div>';
-    $(document.body).append('<div id="' + this.modal_id + '" class="ekko-lightbox modal fade" tabindex="-1"><div class="modal-dialog"><div class="modal-content">' + header + '<div class="modal-body"><div class="ekko-lightbox-container"><div></div></div></div>' + footer + '</div></div></div>');
+    $(document.body).append('<div id="' + this.modal_id + '" class="ekko-lightbox modal fade" tabindex="-1"><div class="modal-dialog"><div class="modal-content"><div class="modal-body"><div class="ekko-lightbox-container"><div></div></div></div>' + footer + '</div></div></div>');
     this.modal = $('#' + this.modal_id);
     this.modal_dialog = this.modal.find('.modal-dialog').first();
     this.modal_content = this.modal.find('.modal-content').first();
@@ -373,13 +373,15 @@ License: https://github.com/ashleydw/lightbox/blob/master/LICENSE
       margins = parseFloat(this.modal_dialog.css('margin-top')) + parseFloat(this.modal_dialog.css('margin-bottom'));
       max_height = $(window).height() - border_padding - margins - header_height - footer_height;
       factor = Math.min(max_height / height, 1);
-      this.modal_dialog.css('height', 'auto').css('max-height', max_height);
+      this.modal_dialog.css('height', 'auto').css('max-height', '90%');
       return this.resize(factor * width);
     },
     resize: function(width) {
       var width_total;
       width_total = width + this.border.left + this.padding.left + this.padding.right + this.border.right;
-      this.modal_dialog.css('width', 'auto').css('max-width', width_total);
+
+      this.modal_dialog.css('width', 'auto').css('max-width', '80%');
+      this.modal_dialog.css('height', 'auto').css('max-height', '80%');
       this.lightbox_container.find('a').css('line-height', function() {
         return $(this).parent().height() + 'px';
       });
