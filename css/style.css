@@ -1737,3 +1737,11 @@ color: white;
 .docs a:hover {
    color:#49b5e7;
 }
+
+.img-responsive {
+    border: 1px solid black;
+}
+
+.panel .panel-body a img {
+    border: 1px solid #ccc;
+}

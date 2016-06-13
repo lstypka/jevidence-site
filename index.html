@@ -147,7 +147,7 @@
             <pre><code>&lt;dependency&gt;
     &lt;groupId&gt;pl.stypka.jevidence&lt;/groupId&gt;
     &lt;artifactId&gt;jevidence-testng&lt;/artifactId&gt;
-    &lt;version&gt;1.0&lt;/version&gt;
+    &lt;version&gt;1.1&lt;/version&gt;
 &lt;/dependency&gt;</code></pre>
             </div>
 
@@ -156,7 +156,7 @@
             <pre><code>&lt;dependency&gt;
     &lt;groupId&gt;pl.stypka.jevidence&lt;/groupId&gt;
     &lt;artifactId&gt;jevidence-junit&lt;/artifactId&gt;
-    &lt;version&gt;1.0&lt;/version&gt;
+    &lt;version&gt;1.1&lt;/version&gt;
 &lt;/dependency&gt;</code></pre>
             </div>
         </div>
@@ -179,7 +179,8 @@ public class AbstractTest {
             <div class="col-lg-12 col-sm-6 wow ">
             <pre><code>jevidence.reportPath=C:\\reports\jevidence
 jevidence.removeExecutions=true
-jevidence.maxNumberOfExecutions=50</code></pre>
+jevidence.maxNumberOfExecutions=50
+jevidence.embedded=true</code></pre>
             </div>
         </div>
         <div class="row animated  fadeInUp wow">
@@ -191,7 +192,7 @@ jevidence.maxNumberOfExecutions=50</code></pre>
             <pre><code>&lt;dependency&gt;
     &lt;groupId&gt;pl.stypka.jevidence&lt;/groupId&gt;
     &lt;artifactId&gt;jevidence-java-logger&lt;/artifactId&gt;
-    &lt;version&gt;1.0&lt;/version&gt;
+    &lt;version&gt;1.1&lt;/version&gt;
 &lt;/dependency&gt;</code></pre>
                 <pre><code>java.util.logging.Logger LOG = java.util.logging.Logger.getLogger(AbstractTest.class.getName());
 LOG.getParent().addHandler(new JEvidenceUtilLoggerHandler());</code></pre>
@@ -201,7 +202,7 @@ LOG.getParent().addHandler(new JEvidenceUtilLoggerHandler());</code></pre>
             <pre><code>&lt;dependency&gt;
     &lt;groupId&gt;pl.stypka.jevidence&lt;/groupId&gt;
     &lt;artifactId&gt;jevidence-log4j&lt;/artifactId&gt;
-    &lt;version&gt;1.0&lt;/version&gt;
+    &lt;version&gt;1.1&lt;/version&gt;
 &lt;/dependency&gt;</code></pre>
                 <pre><code>org.apache.log4j.Logger LOG4J = org.apache.log4j.Logger.getLogger(AbstractTest.class.getName());
 LOG4J.getParent().addAppender(new JEvidenceLog4jHandler());</code></pre>
@@ -269,8 +270,31 @@ LOG4J.getParent().addAppender(new JEvidenceLog4jHandler());</code></pre>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 col-sm-6  text-right animated  fadeInUp wow">
-                <img src="img/dashboard_pic.png"/>
+            <div class="col-lg-6 col-sm-6  text-left animated  fadeInUp wow">
+                <div class="service-list">
+                    <div class="service-list-col1"><i class="icon-doc"></i></div>
+                    <div class="service-list-col2">
+                        <h3><a href="https://github.com/lstypka/jevidence/tree/master/jevidence-example-junit" target="_blank">Example - jUnit</a></h3>
+                    </div>
+                </div>
+                <div class="service-list">
+                    <div class="service-list-col1"><i class="icon-doc"></i></div>
+                    <div class="service-list-col2">
+                        <h3><a href="https://github.com/lstypka/jevidence/tree/master/jevidence-example-testng" target="_blank">Example - testNG</a></h3>
+                    </div>
+                </div>
+                <div class="service-list">
+                    <div class="service-list-col1"><i class="icon-doc"></i></div>
+                    <div class="service-list-col2">
+                        <h3><a href="https://github.com/lstypka/jevidence/tree/master/jevidence-example-log4j" target="_blank">Example - Log4j </a></h3>
+                    </div>
+                </div>
+                <div class="service-list">
+                    <div class="service-list-col1"><i class="icon-doc"></i></div>
+                    <div class="service-list-col2">
+                        <h3><a href="https://github.com/lstypka/jevidence/tree/master/jevidence-example-logger" target="_blank">Example - java.util.logging.Logger</a></h3>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
